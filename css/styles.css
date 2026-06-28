@@ -165,7 +165,8 @@ textarea.field-in{resize:vertical}
 .sync-step .btn{margin-top:8px}
 .sync-acc{font-size:13px;margin:4px 0 2px}
 .sync-or{text-align:center;color:var(--muted);font-size:12px;margin:8px 0}
-.sync-modal .field-in{width:100%}
+.sync-row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.sync-modal .field-in{width:100%;margin-top:6px}
 
 /* ── Responsive (Android / mobile) ──────────────────────────────────────────── */
 @media (max-width:860px){

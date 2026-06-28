@@ -95,69 +95,58 @@ function updateCloudBadge(s) {
 }
 
 function openSyncModal() {
-  const cfg = Sync.getConfig();
-  const s = Sync.state;
+  const cfg = Cloud.getConfig();
+  const s = Cloud.state;
   const body = el('div.sync-modal');
 
-  // 1. Identifiant d'application Azure
+  // 1. Connexion au projet Supabase (adresse + clé publique « anon »)
   body.append(el('div.sync-step', {}, [
-    el('h4', { text: '1. Identifiant d\'application (Azure)' }),
-    el('p.muted', { text: 'Collez le « ID d\'application (client) » obtenu lors de l\'inscription Azure (voir README). Une seule fois.' }),
+    el('h4', { text: '1. Connexion au projet partagé (Supabase)' }),
+    el('p.muted', { text: 'Collez l\'adresse du projet et la clé publique « anon » (fournies par l\'administrateur, voir PARTAGE_SUPABASE.md). Une seule fois par appareil.' }),
   ]));
-  const fClient = el('input.field-in', { placeholder: 'client_id (ex: 1234abcd-…)', value: cfg.clientId });
-  body.append(fClient);
-
-  // 2. Connexion Microsoft
-  const accLine = el('div.sync-acc', { text: s.account ? '✓ Connecté : ' + s.account : 'Non connecté.' });
-  const btnSign = el('button.btn.btn-primary', { text: s.account ? 'Se déconnecter' : 'Se connecter à Microsoft', onclick: async () => {
-    try {
-      await Sync.setClientId(fClient.value);
-      if (Sync.signedIn()) { await Sync.signOut(); }
-      else { await Sync.signIn(); }
-      reopen();
-    } catch (e) { toast('Connexion : ' + e.message, 'err', 5000); }
-  } });
-  body.append(el('div.sync-step', {}, [el('h4', { text: '2. Compte Microsoft (OneDrive)' }), accLine, btnSign]));
-
-  // 3. Partage
-  const fLink = el('input.field-in', { placeholder: 'Lien de partage reçu (collègues)', value: cfg.shareLink });
-  const ownerBtn = el('button.btn.btn-ghost', { text: '👑 Je suis l\'administrateur : créer le lien à partager', onclick: async () => {
-    if (!Sync.signedIn()) return toast('Connectez-vous d\'abord.', 'warn');
-    try {
-      toast('Création du fichier partagé…', 'info');
-      const link = await Sync.createShareLink();
-      fLink.value = '';
-      await navigator.clipboard?.writeText(link).catch(() => {});
-      modal('Lien de partage créé ✔', el('div', {}, [
-        el('p', { text: 'Envoyez ce lien à vos collègues. Ils le collent dans le champ « Lien de partage reçu » puis se connectent avec leur compte Microsoft.' }),
-        el('textarea.field-in', { rows: 3, readonly: true, onclick: e => e.target.select() }, [link]),
-        el('p.muted', { text: 'Lien copié dans le presse-papiers.' }),
-      ]));
-    } catch (e) { toast('Erreur : ' + e.message, 'err', 6000); }
-  } });
-  const joinBtn = el('button.btn.btn-primary', { text: 'Utiliser ce lien de partage', onclick: async () => {
-    try { await Sync.setShareLink(fLink.value); toast('Lien enregistré ✔', 'ok'); await Sync.syncNow(refreshCurrent); reopen(); }
+  const fUrl = el('input.field-in', { placeholder: 'https://xxxx.supabase.co', value: cfg.url });
+  const fKey = el('input.field-in', { placeholder: 'Clé anon (eyJhbGciOi…)', value: cfg.key });
+  const saveBtn = el('button.btn.btn-ghost', { text: 'Enregistrer la connexion', onclick: async () => {
+    try { await Cloud.configure(fUrl.value, fKey.value); await Cloud.init(); toast('Connexion enregistrée ✔', 'ok'); reopen(); }
     catch (e) { toast('Erreur : ' + e.message, 'err', 6000); }
   } });
-  body.append(el('div.sync-step', {}, [
-    el('h4', { text: '3. Partage des données' }),
-    el('p.muted', { text: 'Administrateur (propriétaire des données) : créez le lien. Collègues : collez le lien reçu.' }),
-    ownerBtn, el('div.sync-or', { text: '— ou —' }), fLink, joinBtn,
-  ]));
+  body.append(fUrl, fKey, saveBtn);
 
-  // 4. Synchro
+  // 2. Compte utilisateur (e-mail + mot de passe)
+  const accLine = el('div.sync-acc', { text: s.account ? '✓ Connecté : ' + s.account : 'Non connecté.' });
+  const fEmail = el('input.field-in', { type: 'email', placeholder: 'votre e-mail' });
+  const fPwd = el('input.field-in', { type: 'password', placeholder: 'mot de passe (min. 6 caractères)' });
+  const inBtn = el('button.btn.btn-primary', { text: 'Se connecter', onclick: async () => {
+    try { await Cloud.signIn(fEmail.value.trim(), fPwd.value); toast('Connecté ✔', 'ok'); await Cloud.syncNow(); reopen(); }
+    catch (e) { toast('Connexion : ' + e.message, 'err', 6000); }
+  } });
+  const upBtn = el('button.btn.btn-ghost', { text: 'Créer un compte', onclick: async () => {
+    try { const r = await Cloud.signUp(fEmail.value.trim(), fPwd.value);
+      if (r === 'confirm') toast('Compte créé — confirmez via l\'e-mail reçu, puis connectez-vous.', 'info', 7000);
+      else { toast('Compte créé et connecté ✔', 'ok'); await Cloud.syncNow(); }
+      reopen();
+    } catch (e) { toast('Création : ' + e.message, 'err', 6000); }
+  } });
+  const outBtn = el('button.btn.btn-ghost', { text: 'Se déconnecter', onclick: async () => { await Cloud.signOut(); reopen(); } });
+  const step2 = el('div.sync-step', {}, [el('h4', { text: '2. Votre compte' }), accLine]);
+  if (s.account) step2.append(outBtn);
+  else if (Cloud.isConfigured()) step2.append(fEmail, fPwd, el('div.sync-row', {}, [inBtn, upBtn]));
+  else step2.append(el('p.muted', { text: '➳ Enregistrez d\'abord la connexion (étape 1).' }));
+  body.append(step2);
+
+  // 3. Synchro
   body.append(el('div.sync-step', {}, [
-    el('h4', { text: '4. Synchronisation' }),
+    el('h4', { text: '3. Synchronisation temps réel' }),
     el('p.muted', { text: s.lastSync ? 'Dernière synchro : ' + new Date(s.lastSync).toLocaleString('fr-FR') : 'Jamais synchronisé.' }),
     s.error ? el('p', { text: '⚠ ' + s.error, style: { color: '#B91C1C' } }) : null,
-    el('button.btn.btn-primary', { text: '🔄 Synchroniser maintenant', onclick: async () => {
-      try { await Sync.syncNow(refreshCurrent); toast('Synchronisé ✔', 'ok'); reopen(); }
+    s.account ? el('button.btn.btn-primary', { text: '🔄 Synchroniser maintenant', onclick: async () => {
+      try { await Cloud.syncNow(); toast('Synchronisé ✔', 'ok'); refreshCurrent(); reopen(); }
       catch (e) { toast('Synchro : ' + e.message, 'err', 6000); }
-    } }),
-    el('p.muted', { text: 'La synchro est automatique après chaque modification (toutes les ~3 s).' }),
+    } }) : null,
+    el('p.muted', { text: 'Une fois connecté : synchro automatique en temps réel entre tous les utilisateurs.' }),
   ]));
 
-  const overlay = modal('☁️ Partage OneDrive — multi-utilisateur', body);
+  modal('☁️ Partage multi-utilisateur (Supabase)', body);
   function reopen() { document.querySelector('.overlay')?.remove(); openSyncModal(); }
 }
 
@@ -182,18 +171,13 @@ async function boot() {
   $('#install-btn').addEventListener('click', doInstall);
   $('#cloud-btn').addEventListener('click', openSyncModal);
 
-  // Synchronisation OneDrive
+  // Synchronisation multi-utilisateur (Supabase)
   try {
-    await Sync.loadConfig();
-    Sync.onStatus(updateCloudBadge);
-    Sync.enableAutoSync(refreshCurrent);
-    updateCloudBadge(Sync.state);
-    if (Sync.isConfigured()) {
-      const ok = await Sync.tryAutoSignIn();
-      updateCloudBadge(Sync.state);
-      if (ok) Sync.pull(refreshCurrent).catch(() => {});
-    }
-  } catch (e) { console.warn('Sync init:', e); }
+    Cloud.onStatus(updateCloudBadge);
+    Cloud.enableAutoSync(refreshCurrent);
+    await Cloud.init();
+    if (Cloud.signedIn()) { await Cloud.pull(); Cloud.subscribeRealtime(); refreshCurrent(); }
+  } catch (e) { console.warn('Cloud init:', e); }
 
   window.addEventListener('hashchange', () => { const p = location.hash.slice(1); if (p && p !== currentPage && Pages[p]) navigate(p); });
   window.addEventListener('resize', () => { if (Pages[currentPage] && $('#content').firstChild && $('#content').firstChild._onMount) {

@@ -1,10 +1,10 @@
 /* Service worker ANPER SE — cache hors-ligne (app shell + seed). */
-const CACHE = 'anper-se-v2';
+const CACHE = 'anper-se-v3';
 const ASSETS = [
   './', './index.html', './manifest.webmanifest',
   './css/styles.css',
   './js/data.js', './js/ui.js', './js/db.js', './js/charts.js',
-  './js/pages.js', './js/pages2.js', './js/sync.js', './js/app.js',
+  './js/pages.js', './js/pages2.js', './js/cloud.js', './js/app.js',
   './data/seed.json',
   './icons/logo.png', './icons/icon-192.png', './icons/icon-512.png',
 ];
