@@ -340,12 +340,15 @@ const DB = (() => {
     }, null, 2);
   }
   async function importJSON(obj, { replaceRenaloc = false } = {}) {
+    // Estampille uid/_updated si absents (anciennes sauvegardes / export depuis anper.db)
+    // — sans cela, le partage/fusion par uid laisserait tomber ces fiches.
+    const stamp = (r) => { if (!r.uid) r.uid = uuid(); if (!r._updated) r._updated = Date.now(); return r; };
     if (obj.projets) { await clear('projets'); cache.projets = [];
-      for (const p of obj.projets) { await put('projets', p); cache.projets.push(p); } }
+      for (const p of obj.projets) { stamp(p); await put('projets', p); cache.projets.push(p); } }
     if (obj.clients) { await clear('clients'); cache.clients = [];
-      for (const c of obj.clients) { await put('clients', c); cache.clients.push(c); } }
+      for (const c of obj.clients) { stamp(c); await put('clients', c); cache.clients.push(c); } }
     if (obj.composantes) { await clear('composantes'); cache.composantes = [];
-      for (const cp of obj.composantes) { delete cp.id; const id = await put('composantes', cp); cp.id = id; cache.composantes.push(cp); } }
+      for (const cp of obj.composantes) { delete cp.id; stamp(cp); const id = await put('composantes', cp); cp.id = id; cache.composantes.push(cp); } }
     if (obj.renaloc && (replaceRenaloc || !renalocLoaded())) { cache.renaloc = obj.renaloc; await kvSet('renaloc', obj.renaloc); }
   }
   // Import RENALOC depuis un tableau de lignes {region,departement,commune,localite}
