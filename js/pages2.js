@@ -372,9 +372,35 @@ Pages.rapports = function () {
     el('button.btn.btn-primary', { text: 'Exporter la sauvegarde', onclick: () => { downloadFile('ANPER_sauvegarde_' + Date.now() + '.json', DB.exportJSON(), 'application/json'); toast('Sauvegarde exportée ✔', 'ok'); } }),
     el('button.btn.btn-ghost', { text: 'Restaurer une sauvegarde', onclick: importBackup }),
   ]));
+  grid.append(card('🤝', 'Partage en équipe (sans compte)', 'Échangez les données via un dossier OneDrive partagé : exportez votre fichier, déposez-le dans le dossier ; chacun fusionne les fichiers reçus (fusion par fiche, sans écrasement).', [
+    el('button.btn.btn-primary', { text: '📤 Exporter pour partage', onclick: () => {
+      const st = DB.exportState(); delete st.renaloc; // léger : pas de RENALOC
+      const who = (localStorage.getItem('anper_user') || 'moi').replace(/[^\w-]/g, '');
+      downloadFile(`ANPER_partage_${who}_${Date.now()}.json`, JSON.stringify(st), 'application/json');
+      toast('Fichier de partage exporté ✔', 'ok');
+    } }),
+    el('button.btn.btn-ghost', { text: '🔀 Fusionner un fichier reçu', onclick: mergeBackup }),
+  ]));
   root.append(grid);
   return root;
 };
+
+async function mergeBackup() {
+  const inp = el('input', { type: 'file', accept: '.json', multiple: true });
+  inp.addEventListener('change', async () => {
+    if (!inp.files.length) return;
+    let nb = 0;
+    try {
+      for (const file of inp.files) {
+        const obj = JSON.parse(await file.text());
+        await DB.mergeRemote(obj); nb++;
+      }
+      toast(`${nb} fichier(s) fusionné(s) ✔ — données combinées sans perte.`, 'ok', 4500);
+      navigate('dashboard');
+    } catch (e) { toast('Fichier invalide : ' + e.message, 'err', 6000); }
+  });
+  inp.click();
+}
 
 async function importBackup() {
   const inp = el('input', { type: 'file', accept: '.json' });
