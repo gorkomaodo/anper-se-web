@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#005A23">
+  <title>ANPER Messagerie</title>
+  <link rel="manifest" href="manifest-messagerie.webmanifest">
+  <link rel="icon" href="icons/msg-192.png">
+  <link rel="apple-touch-icon" href="icons/msg-192.png">
+  <!-- ?v=96 : numero de version (a augmenter avec CACHE dans sw.js) pour que les navigateurs
+       rechargent les fichiers apres une mise a jour (le NAS n'envoie pas de consigne de cache) -->
+  <link rel="stylesheet" href="css/styles.css?v=96">
+</head>
+<body>
+  <div id="scrim"></div>
+  <aside id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar">
+      <button id="menu-btn" class="menu-btn" aria-label="Menu">☰</button>
+      <div class="topbar-title">ANPER Messagerie — messages et appels entre agents</div>
+      <button id="help-btn" class="btn btn-install" title="Aide / Didacticiel de cette page">❓ Aide</button>
+      <button id="cloud-btn" class="btn btn-install" title="Partage OneDrive">☁️ <span id="cloud-state">Hors-ligne</span></button>
+      <button id="install-btn" class="btn btn-install" style="display:none">⬇ Installer l'app</button>
+    </header>
+    <main id="content" class="content"></main>
+  </div>
+
+  <!-- Application Messagerie autonome : même code que la plateforme, limitée à la messagerie -->
+  <script>window.ANPER_APP = 'messagerie';</script>
+  <script src="js/data.js?v=96"></script>
+  <script src="js/ui.js?v=96"></script>
+  <script src="js/db.js?v=96"></script>
+  <script src="js/charts.js?v=96"></script>
+  <script src="js/pages.js?v=96"></script>
+  <script src="js/pages2.js?v=96"></script>
+  <script src="js/admin.js?v=96"></script>
+  <script src="js/help.js?v=96"></script>
+  <script src="js/cloud.js?v=96"></script>
+  <script src="js/auth.js?v=96"></script>
+  <script src="js/chat.js?v=96"></script>
+  <script src="js/pointage.js?v=96"></script>
+  <script src="js/app.js?v=96"></script>
+  <script>
+    // Battement de coeur — UNIQUEMENT en local (lanceur Lancer_ANPER.bat) :
+    // permet a la fenetre du serveur local de se fermer quand on ferme l'onglet.
+    (function () {
+      var h = location.hostname;
+      if (['localhost', '127.0.0.1', '::1', '[::1]', ''].indexOf(h) === -1) return;
+      var ping = function () { fetch('/__ping?t=' + Date.now(), { cache: 'no-store' }).catch(function () {}); };
+      ping();
+      setInterval(ping, 3000);
+    })();
+  </script>
+</body>
+</html>

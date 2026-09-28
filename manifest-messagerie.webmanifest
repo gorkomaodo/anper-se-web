@@ -1,0 +1,32 @@
+{
+    "name":  "ANPER Messagerie",
+    "short_name":  "Messagerie",
+    "description":  "Messagerie interne ANPER : messages et appels audio/vidéo entre agents.",
+    "lang":  "fr",
+    "start_url":  "./messagerie.html",
+    "scope":  "./",
+    "display":  "standalone",
+    "orientation":  "any",
+    "background_color":  "#F0F4F8",
+    "theme_color":  "#005A23",
+    "icons":  [
+                  {
+                      "purpose":  "any",
+                      "type":  "image/png",
+                      "sizes":  "192x192",
+                      "src":  "icons/msg-192.png"
+                  },
+                  {
+                      "purpose":  "any",
+                      "type":  "image/png",
+                      "sizes":  "512x512",
+                      "src":  "icons/msg-512.png"
+                  },
+                  {
+                      "purpose":  "maskable",
+                      "type":  "image/png",
+                      "sizes":  "512x512",
+                      "src":  "icons/msg-maskable-512.png"
+                  }
+              ]
+}
