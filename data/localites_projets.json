@@ -1,0 +1,906 @@
+{
+"gassi": [
+{
+"l": "GASSI",
+"c": "Loga",
+"d": "Loga",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.757267,
+"lng": 3.24545
+}
+],
+"batamberi mamoudou": [
+{
+"l": "BATAMBERI MAMOUDOU",
+"c": "Dogondoutchi",
+"d": "Dogondoutchi",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.637883,
+"lng": 3.8103
+}
+],
+"kerkerteye": [
+{
+"l": "KERKERTEYE",
+"c": "Dogondoutchi",
+"d": "Dogondoutchi",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.215217,
+"lng": 4.337033
+}
+],
+"kadandame roumbouki": [
+{
+"l": "KADANDAME ROUMBOUKI",
+"c": "Dan-Kassari",
+"d": "Dogondoutchi",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.72015,
+"lng": 4.38015
+}
+],
+"roubabia": [
+{
+"l": "ROUBABIA",
+"c": "Aguie",
+"d": "Aguie",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.6049,
+"lng": 7.764083
+}
+],
+"dan bouzou": [
+{
+"l": "DAN BOUZOU",
+"c": "Tcadoua",
+"d": "Aguie",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.6573,
+"lng": 7.550983
+}
+],
+"bougoun gaba": [
+{
+"l": "BOUGOUN GABA",
+"c": "Tcadoua",
+"d": "Aguie",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.70405,
+"lng": 7.491667
+}
+],
+"marin dawa": [
+{
+"l": "MARIN DAWA",
+"c": "Tcadoua",
+"d": "Aguie",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.617983,
+"lng": 7.541567
+}
+],
+"serkin arewa": [
+{
+"l": "SERKIN AREWA",
+"c": "El Allassane Maireyrey",
+"d": "Mayahi",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.094665,
+"lng": 7.569432
+}
+],
+"malamawa": [
+{
+"l": "MALAMAWA",
+"c": "El Allassane Maireyrey",
+"d": "Mayahi",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.677117,
+"lng": 6.988417
+}
+],
+"gangara": [
+{
+"l": "GANGARA",
+"c": "Ourno",
+"d": "Madaoua",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.123317,
+"lng": 6.331133
+}
+],
+"koren mahalba": [
+{
+"l": "KOREN MAHALBA",
+"c": "Ourno",
+"d": "Madaoua",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.0914,
+"lng": 6.4248
+}
+],
+"jiga mahamada": [
+{
+"l": "JIGA MAHAMADA",
+"c": "Ourno",
+"d": "Madaoua",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.2975,
+"lng": 6.4494
+}
+],
+"illagawane": [
+{
+"l": "ILLAGAWANE",
+"c": "Azarori",
+"d": "Madaoua",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.983794,
+"lng": 6.139416
+}
+],
+"zoudi (zoudi 1)": [
+{
+"l": "ZOUDI (ZOUDI 1)",
+"c": "Magaria",
+"d": "Magaria",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.835867,
+"lng": 8.536767
+}
+],
+"garin lashe (rigal mai dachi 6)": [
+{
+"l": "GARIN LASHÉ (RIGAL MAI DACHI 6)",
+"c": "Magaria",
+"d": "Magaria",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.835867,
+"lng": 8.536767
+}
+],
+"wazou wouzou (rigal mai dachi 4)": [
+{
+"l": "WAZOU WOUZOU (RIGAL MAI DACHI 4)",
+"c": "Magaria",
+"d": "Magaria",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.835867,
+"lng": 8.536767
+}
+],
+"maimage tchiroma (rigal mai dachi 1-2)": [
+{
+"l": "MAIMAGÉ TCHIROMA (RIGAL MAI DACHI 1-2)",
+"c": "Magaria",
+"d": "Magaria",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.835867,
+"lng": 8.536767
+}
+],
+"guidan gona": [
+{
+"l": "GUIDAN GONA",
+"c": "Magaria",
+"d": "Magaria",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 12.991167,
+"lng": 8.872967
+}
+],
+"yelmi": [
+{
+"l": "YELMI",
+"c": "Dogonkiria",
+"d": "Dogondoutchi",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.829486,
+"lng": 4.106907
+}
+],
+"roumboukawa": [
+{
+"l": "ROUMBOUKAWA",
+"c": "Dogonkiria",
+"d": "Dogondoutchi",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.204733,
+"lng": 3.836533
+}
+],
+"jiga": [
+{
+"l": "JIGA",
+"c": "Bagaroua",
+"d": "Bagaroua",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.286617,
+"lng": 4.622033
+}
+],
+"ambagoura": [
+{
+"l": "AMBAGOURA",
+"c": "Bagaroua",
+"d": "Bagaroua",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.295183,
+"lng": 4.647783
+}
+],
+"teguirwitt": [
+{
+"l": "TEGUIRWITT",
+"c": "Ingall",
+"d": "Ingall",
+"r": "Agadez",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 16.728217,
+"lng": 7.44825
+}
+],
+"farga": [
+{
+"l": "FARGA",
+"c": "Maine Soroa",
+"d": "Mainesoroa",
+"r": "Diffa",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.62919,
+"lng": 11.875169
+}
+],
+"talbari": [
+{
+"l": "TALBARI",
+"c": "Goudoumaria",
+"d": "Goudoumaria",
+"r": "Diffa",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.530999,
+"lng": 11.643508
+}
+],
+"saourin kaihi": [
+{
+"l": "SAOURIN KAIHI",
+"c": "Dan-Kassari",
+"d": "Dogondoutchi",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.605067,
+"lng": 4.309083
+}
+],
+"tallawal": [
+{
+"l": "TALLAWAL",
+"c": "Falmey",
+"d": "Falmey",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 12.565772,
+"lng": 2.851999
+}
+],
+"hankoura": [
+{
+"l": "HANKOURA",
+"c": "Bana",
+"d": "Gaya",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 12.038583,
+"lng": 3.636317
+}
+],
+"faska, massama": [
+{
+"l": "FASKA, MASSAMA",
+"c": "Bana",
+"d": "Gaya",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 12.052767,
+"lng": 3.55035
+}
+],
+"gondarou": [
+{
+"l": "GONDAROU",
+"c": "Tounouga",
+"d": "Gaya",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 11.742667,
+"lng": 3.647483
+}
+],
+"deboga": [
+{
+"l": "DEBOGA",
+"c": "Birni N'Gaoure",
+"d": "Boboye",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.068564,
+"lng": 2.872948
+}
+],
+"makerawa et mai kogo": [
+{
+"l": "MAKERAWA ET MAI KOGO",
+"c": "Maijirgui",
+"d": "Tessaoua",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.798552,
+"lng": 8.322876
+}
+],
+"goroubeye": [
+{
+"l": "GOROUBEYE",
+"c": "Maijirgui",
+"d": "Tessaoua",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.989617,
+"lng": 8.184117
+}
+],
+"kaoutchin kaba": [
+{
+"l": "KAOUTCHIN KABA",
+"c": "Ourafane",
+"d": "Tessaoua",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.105033,
+"lng": 8.4308
+}
+],
+"koumtchi": [
+{
+"l": "KOUMTCHI",
+"c": "Ourafane",
+"d": "Tessaoua",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.02242,
+"lng": 8.19438
+}
+],
+"adji damaou": [
+{
+"l": "ADJI DAMAOU",
+"c": "Ourafane",
+"d": "Tessaoua",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.002802,
+"lng": 8.124265
+}
+],
+"wakasso": [
+{
+"l": "WAKASSO",
+"c": "Tcadoua",
+"d": "Aguie",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.694326,
+"lng": 7.502964
+}
+],
+"garin kaoura": [
+{
+"l": "GARIN KAOURA",
+"c": "Madarounfa",
+"d": "Madarounfa",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.063559,
+"lng": 7.16849
+}
+],
+"bagueda": [
+{
+"l": "BAGUEDA",
+"c": "Safo",
+"d": "Madarounfa",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.276543,
+"lng": 7.010644
+}
+],
+"sabarou": [
+{
+"l": "SABAROU",
+"c": "Roumbou I",
+"d": "Dakoro",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.759095,
+"lng": 6.874514
+}
+],
+"yandoto": [
+{
+"l": "YANDOTO",
+"c": "Sae Saboua",
+"d": "Guidan-Roumdji",
+"r": "Maradi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.615053,
+"lng": 7.159407
+}
+],
+"garadoume": [
+{
+"l": "GARADOUME",
+"c": "Bouza",
+"d": "Bouza",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.366233,
+"lng": 5.88415
+}
+],
+"tounga akay": [
+{
+"l": "TOUNGA AKAY",
+"c": "Allakay",
+"d": "Bouza",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.28424,
+"lng": 5.634997
+}
+],
+"dogon gona": [
+{
+"l": "DOGON GONA",
+"c": "Bouza",
+"d": "Bouza",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF"
+}
+],
+"daggou akay": [
+{
+"l": "DAGGOU AKAY",
+"c": "Tajae",
+"d": "Illela",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.160213,
+"lng": 5.319388
+}
+],
+"tsalama dangna": [
+{
+"l": "TSALAMA DANGNA",
+"c": "Illela",
+"d": "Illela",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.421577,
+"lng": 5.362757
+}
+],
+"biguel et biguel kawkowa": [
+{
+"l": "BIGUEL ET BIGUEL KAWKOWA",
+"c": "Dogueraoua",
+"d": "Bouza",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.816769,
+"lng": 5.708928
+}
+],
+"adran boukar": [
+{
+"l": "ADRAN BOUKAR",
+"c": "Afala",
+"d": "Tahoua",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 15.282219,
+"lng": 4.992663
+}
+],
+"tiguirnassi": [
+{
+"l": "TIGUIRNASSI",
+"c": "Kaou",
+"d": "Tchintabaraden",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 15.3728,
+"lng": 5.367567
+}
+],
+"abankwor(2va)": [
+{
+"l": "ABANKWOR(2VA)",
+"c": "Kaou",
+"d": "Tchintabaraden",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 15.170267,
+"lng": 5.349967
+}
+],
+"baki zongo et kosga": [
+{
+"l": "BAKI ZONGO ET KOSGA",
+"c": "Madaoua",
+"d": "Madaoua",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.046038,
+"lng": 5.953955
+}
+],
+"zouragan": [
+{
+"l": "ZOURAGAN",
+"c": "Hamdallaye",
+"d": "Kollo",
+"r": "Tillaberi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.770416,
+"lng": 2.539061
+}
+],
+"baban gata": [
+{
+"l": "BABAN GATA",
+"c": "Kirtachi",
+"d": "Kollo",
+"r": "Tillaberi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 12.949949,
+"lng": 2.405798
+}
+],
+"sounga me": [
+{
+"l": "SOUNGA ME",
+"c": "Kirtachi",
+"d": "Kollo",
+"r": "Tillaberi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 12.903479,
+"lng": 2.385782
+}
+],
+"winde beri": [
+{
+"l": "WINDE BERI",
+"c": "Kollo",
+"d": "Kollo",
+"r": "Tillaberi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.330347,
+"lng": 2.434847
+}
+],
+"soley ganaou tondi": [
+{
+"l": "SOLEY GANAOU TONDI",
+"c": "Tondikandia",
+"d": "Filingue",
+"r": "Tillaberi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.168764,
+"lng": 2.85667
+}
+],
+"bonberi": [
+{
+"l": "BONBERI",
+"c": "Tondikandia",
+"d": "Filingue",
+"r": "Tillaberi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.891742,
+"lng": 3.019015
+}
+],
+"sansane tabalat": [
+{
+"l": "SANSANÉ TABALAT",
+"c": "Tagazar",
+"d": "Balleyara",
+"r": "Tillaberi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.796468,
+"lng": 3.031148
+}
+],
+"bangoukoire": [
+{
+"l": "BANGOUKOIRE",
+"c": "Koure",
+"d": "Kollo",
+"r": "Tillaberi",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.332347,
+"lng": 2.58016
+}
+],
+"guidan boultou": [
+{
+"l": "GUIDAN BOULTOU",
+"c": "Gangara (Tanout)",
+"d": "Tanout",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.349896,
+"lng": 8.30871
+}
+],
+"dambarko": [
+{
+"l": "DAMBARKO",
+"c": "Gangara (Tanout)",
+"d": "Tanout",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.527994,
+"lng": 8.178163
+}
+],
+"hallalin tchantchar": [
+{
+"l": "HALLALIN TCHANTCHAR",
+"c": "Wame",
+"d": "Damagaram Takaya",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.412385,
+"lng": 9.250535
+}
+],
+"raffa": [
+{
+"l": "RAFFA",
+"c": "Damagaram Takaya",
+"d": "Damagaram Takaya",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.135013,
+"lng": 9.69269
+}
+],
+"ilallah barma abdou": [
+{
+"l": "ILALLAH BARMA ABDOU",
+"c": "Wacha",
+"d": "Magaria",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.575084,
+"lng": 9.479963
+}
+],
+"angoual halbaou": [
+{
+"l": "ANGOUAL HALBAOU",
+"c": "Dan Barto",
+"d": "Kantche",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.272676,
+"lng": 8.340259
+}
+],
+"doundou": [
+{
+"l": "DOUNDOU",
+"c": "Kourni",
+"d": "Kantche",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.285617,
+"lng": 8.48955
+}
+],
+"angoual tarou": [
+{
+"l": "ANGOUAL TAROU",
+"c": "Yaouri",
+"d": "Kantche",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.304362,
+"lng": 8.769882
+}
+],
+"sansani": [
+{
+"l": "SANSANI",
+"c": "Garagoumsa",
+"d": "Takeita",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.666758,
+"lng": 8.284577
+}
+],
+"zoui tchiroma": [
+{
+"l": "ZOUI TCHIROMA",
+"c": "Guidiguir",
+"d": "Goure",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 13.648457,
+"lng": 9.923335
+}
+],
+"gueza ii": [
+{
+"l": "GUEZA II",
+"c": "Damagaram Takaya",
+"d": "Damagaram Takaya",
+"r": "Zinder",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.315833,
+"lng": 9.615483
+}
+],
+"djabda gouiwa": [
+{
+"l": "DJABDA GOUIWA",
+"c": "Guecheme",
+"d": "Tibiri (Doutchi)",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 12.9079,
+"lng": 3.873867
+}
+],
+"koulki": [
+{
+"l": "KOULKI",
+"c": "Azeye",
+"d": "Abalak",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF"
+}
+],
+"mayata": [
+{
+"l": "MAYATA",
+"c": "Azeye",
+"d": "Abalak",
+"r": "Tahoua",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 14.884667,
+"lng": 6.425817
+}
+],
+"kobodey": [
+{
+"l": "KOBODEY",
+"c": "Fakara",
+"d": "Boboye",
+"r": "Dosso",
+"src": "EIES / bilan ANPER"
+}
+],
+"gobirko beri banizounbou": [
+{
+"l": "GOBIRKO BERI BANIZOUNBOU",
+"c": "Fakara",
+"d": "Boboye",
+"r": "Dosso",
+"src": "EIES / bilan ANPER"
+}
+],
+"tondi banda": [
+{
+"l": "TONDI BANDA",
+"c": "Fakara",
+"d": "Boboye",
+"r": "Dosso",
+"src": "EIES / bilan ANPER"
+}
+],
+"gobirko beri zanguina": [
+{
+"l": "GOBIRKO BERI ZANGUINA",
+"c": "Fakara",
+"d": "Boboye",
+"r": "Dosso",
+"src": "EIES / bilan ANPER"
+}
+],
+"amaloul nomade": [
+{
+"l": "AMALOUL NOMADE",
+"c": "Afala",
+"d": "Tahoua",
+"r": "Tahoua",
+"src": "EIES / bilan ANPER"
+}
+],
+"baraze gorou": [
+{
+"l": "BARAZE GOROU",
+"c": "Farey",
+"d": "Dosso",
+"r": "Dosso",
+"src": "PTA 2026"
+}
+],
+"guidan waje abou": [
+{
+"l": "GUIDAN WAJE ABOU",
+"c": "Tagriss",
+"d": "Dakoro",
+"r": "Maradi",
+"src": "PTA 2026"
+}
+],
+"guidan tanko": [
+{
+"l": "GUIDAN TANKO",
+"c": "Kornaka",
+"d": "Dakoro",
+"r": "Maradi",
+"src": "PTA 2026"
+}
+],
+"faska": [
+{
+"l": "FASKA",
+"c": "Bana",
+"d": "Gaya",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 12.052767,
+"lng": 3.55035
+}
+],
+"massama": [
+{
+"l": "MASSAMA",
+"c": "Bana",
+"d": "Gaya",
+"r": "Dosso",
+"src": "Situation_Electrification_ANPER VF",
+"lat": 12.052767,
+"lng": 3.55035
+}
+]
+}
